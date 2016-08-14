@@ -42,6 +42,7 @@ run_tests();
 __DATA__
 
 === TEST 1: set_timeouts
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
@@ -67,6 +68,7 @@ event timer add: \d+: 7689:
 
 
 === TEST 2: set_timeouts (nil connect timeout)
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
     proxy_connect_timeout 1234ms;
@@ -93,6 +95,7 @@ event timer add: \d+: 7689:
 
 
 === TEST 3: set_timeouts (nil send timeout)
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
     proxy_send_timeout 5678ms;
@@ -119,6 +122,7 @@ event timer add: \d+: 7689:
 
 
 === TEST 4: set_timeouts (nil read timeout)
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
     proxy_read_timeout 7689ms;
@@ -145,6 +149,7 @@ event timer add: \d+: 7689:
 
 
 === TEST 5: set connect timeout to 0
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
@@ -167,6 +172,7 @@ qr/\[error\] .*? balancer_by_lua:4: bad connect timeout/
 
 
 === TEST 6: set connect timeout to -1
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
@@ -189,6 +195,7 @@ qr/\[error\] .*? balancer_by_lua:4: bad connect timeout/
 
 
 === TEST 7: set send timeout to 0
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
@@ -211,6 +218,7 @@ qr/\[error\] .*? balancer_by_lua:4: bad send timeout/
 
 
 === TEST 8: set send timeout to -1
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
@@ -233,6 +241,7 @@ qr/\[error\] .*? balancer_by_lua:4: bad send timeout/
 
 
 === TEST 9: set read timeout to -1
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
@@ -255,6 +264,7 @@ qr/\[error\] .*? balancer_by_lua:4: bad read timeout/
 
 
 === TEST 10: set_timeouts called in a wrong context
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
@@ -279,6 +289,7 @@ qr/\[error\] .*? content_by_lua.*? failed to call: API disabled in the current c
 
 
 === TEST 11: set_timeouts called with a non-numerical parameter
+--- SKIP
 --- stream_config
     lua_package_path "$TEST_NGINX_CWD/lib/?.lua;;";
 
